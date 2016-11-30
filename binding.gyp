@@ -4,7 +4,6 @@
     },
     "targets": [{
         "target_name": "zookeeper",
-        'dependencies': ['libzk'],
         "sources": ["src/node-zk.cpp"],
         'cflags': ['-Wall', '-O0'],
         'conditions': [
@@ -16,6 +15,14 @@
                     '<!(node -e "require(\'nan\')")'
                 ],
 	            'ldflags': ['-lzookeeper_st'],
+            }],
+            ['OS=="freebsd"', {
+                'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper'],
+                'include_dirs': [
+                    '/usr/local/include/zookeeper',
+                    '<!(node -e "require(\'nan\')")'
+                ],
+                'libraries': ['/usr/local/lib/libzookeeper_st.a'],
             }],
             ['OS=="mac"',{
                 'include_dirs': [
@@ -37,16 +44,6 @@
                 'libraries': ['<(module_root_dir)/deps/zookeeper/src/c/.libs/libzookeeper_st.a'],
             }]
         ]},
-        {
-            'target_name': 'libzk',
-            'type': 'none',
-            'actions': [{
-                'action_name': 'build_zk_client_lib',
-                'inputs': [''],
-                'outputs': [''],
-                'action': ['sh', 'scripts/build.sh']
-            }]
-        },
         {
             "target_name": "after_build",
             "type": "none",

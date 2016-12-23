@@ -1,7 +1,7 @@
 {
    "name": "zookeeper"
   ,"description": "apache zookeeper client (zookeeper async API >= 3.4.0)"
-  ,"version": "3.4.9-2"
+  ,"version": "3.4.9-3"
   ,"author": "Yuri Finkelstein <yurif2003@yahoo.com>"
   ,"contributors": [
     "Yuri Finkelstein <yurif2003@yahoo.com>"
@@ -20,12 +20,12 @@
   }
   ,"keywords": ["apache", "zookeeper", "client"]
   ,"dependencies": {
-    "async": "~0.2.6"
-    ,"nan": "~2.4.0"
-    ,"underscore": "*"
+    "async": "~2.1.4"
+    ,"nan": "~2.5.0"
+    ,"lodash": "~4.17.2"
   }
   ,"devDependencies": {
-    "log4js": "~0.6.0"
+    "log4js": "~1.0.1"
     ,"webworker": ">=0.8.4"
   }
   ,"main": "lib/index"
@@ -34,5 +34,5 @@
      ,"test" : "pushd test; ./test; popd"
      ,"prepublish" : "./scripts/prepublish.sh"
   }
-  ,"engines": { "node": ">=0.8" }
+  ,"engines": { "node": ">=0.10" }
 }

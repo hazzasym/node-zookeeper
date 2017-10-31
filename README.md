@@ -299,4 +299,4 @@ with awesome contributions from:
 
 # FORK change
 
-- Add FreeBSD path to binding.gyp
+- Added FreeBSD path to binding.gyp

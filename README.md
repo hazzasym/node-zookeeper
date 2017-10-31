@@ -296,3 +296,7 @@ with awesome contributions from:
 - Mark Cavage (mcavage)
 - Jakub Lekstan (kuebk)
 - Matt Lavin (mdlavin)
+
+# FORK change
+
+- Add FreeBSD path to binding.gyp

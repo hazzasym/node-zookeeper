@@ -36,11 +36,12 @@
                 }
             }],['OS=="linux"',{
                 'include_dirs': [
+                    '/usr/local/include/zookeeper',
                     '<(module_root_dir)/deps/zookeeper/src/c/include',
                     '<(module_root_dir)/deps/zookeeper/src/c/generated',
                     '<!(node -e "require(\'nan\')")'
                 ],
-                'libraries': ['<(module_root_dir)/deps/zookeeper/src/c/.libs/libzookeeper_st.a'],
+                'libraries': ['/usr/local/lib/libzookeeper_st.a'],
             }]
         ]},
         {

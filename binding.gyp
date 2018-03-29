@@ -35,13 +35,13 @@
                     'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
                 }
             }],['OS=="linux"',{
-                'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', '-DTHREADED'],
-                'defines': ['THREADED'],
+                'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', '-L/usr/local/lib'],
                 'include_dirs': [
+                    '/usr/local/include',
                     '/usr/local/include/zookeeper',
                     '<!(node -e "require(\'nan\')")'
                 ],
-                'libraries': ['/usr/local/lib/libzookeeper_st.a'],
+                'libraries': ['-lzookeeper_st', '/usr/local/lib/libzookeeper_st.a'],
             }]
         ]},
         {

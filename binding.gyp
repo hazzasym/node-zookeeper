@@ -35,7 +35,7 @@
                     'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
                 }
             }],['OS=="linux"',{
-                'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', -DTHREADED],
+                'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', '-DTHREADED'],
                 'include_dirs': [
                     '/usr/local/include/zookeeper',
                     '<(module_root_dir)/deps/zookeeper/src/c/include',

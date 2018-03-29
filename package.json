@@ -16,7 +16,7 @@
   ]
   ,"repository": {
       "type": "git"
-      ,"url": "https://github.com/yfinkelstein/node-zookeeper"
+      ,"url": "https://github.com/hazzasym/node-zookeeper"
   }
   ,"keywords": ["apache", "zookeeper", "client"]
   ,"dependencies": {
@@ -30,7 +30,7 @@
   }
   ,"main": "lib/index"
   ,"scripts" : {
-     "build" : "node-gyp configure build"
+     "build" : "node-gyp configure build --zoookeeper ''"
      ,"test" : "pushd test; ./test; popd"
      ,"prepublish" : "./scripts/prepublish.sh"
   }

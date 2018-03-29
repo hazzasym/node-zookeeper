@@ -38,8 +38,6 @@
                 'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', '-DTHREADED'],
                 'include_dirs': [
                     '/usr/local/include/zookeeper',
-                    '<(module_root_dir)/deps/zookeeper/src/c/include',
-                    '<(module_root_dir)/deps/zookeeper/src/c/generated',
                     '<!(node -e "require(\'nan\')")'
                 ],
                 'libraries': ['/usr/local/lib/libzookeeper_st.a'],

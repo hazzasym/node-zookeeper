@@ -36,6 +36,7 @@
                 }
             }],['OS=="linux"',{
                 'cflags': ['-I/usr/local/include', '-I/usr/local/include/zookeeper', '-DTHREADED'],
+                'defines': ['THREADED'],
                 'include_dirs': [
                     '/usr/local/include/zookeeper',
                     '<!(node -e "require(\'nan\')")'
